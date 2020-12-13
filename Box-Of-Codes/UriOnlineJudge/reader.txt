@@ -1,0 +1,1 @@
+Repositório dedicado aos códigos gerados para os desafios da plataforma URI ONLINE JUDGE em diversas linguagens.
