@@ -1,2 +1,0 @@
-The file is to creat folders in the repository. 
-I do gonne develop applications for learning and self pratics.
