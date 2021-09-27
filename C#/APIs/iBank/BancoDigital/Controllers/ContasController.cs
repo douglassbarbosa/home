@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using BancoDigital.Data;
 using BancoDigital.Models;
 using BancoDigital.Services;
 using BancoDigital.Models.DTO;
@@ -25,9 +19,11 @@ namespace BancoDigital.Controllers
             _service = service;
         }
 
-
-
-        [HttpGet("Saldo/{NumeroConta}")]
+        /// <summary>
+        /// Obter saldo de uma determinada conta
+        /// </summary>
+        /// <param name="conta"></param>
+        [HttpGet("saldo")]
         public async Task<ActionResult> Saldo(string conta)
         {
 
@@ -43,8 +39,14 @@ namespace BancoDigital.Controllers
             return BadRequest();
         }
 
-
-        [HttpPut("Depositar/{NumeroConta}/{valor}")]
+        /// <summary>
+        /// Efetuar Deposito de valor na conta do usuário.
+        /// </summary>
+        /// <param name="conta"></param>
+        /// <param name="valor"></param>
+        /// <returns code="200">Saldo da Conta Atual</returns>
+        /// <returns code="404">Conta não existe.</returns>
+        [HttpPut("Depositar/{conta}/{valor}")]
         public async Task<ActionResult<Conta>> Depositar([FromBody] EntradaContaDTO conta, float valor)
         {
 
@@ -57,8 +59,12 @@ namespace BancoDigital.Controllers
             return NotFound();
         }
 
-
-        [HttpPut("Sacar/{NumeroConta}/{saque}")]
+        /// <summary>
+        /// Sacar / Debitar valor da conta.
+        /// </summary>
+        /// <param name="conta"></param>
+        /// <param name="saque"></param>
+        [HttpPut("Sacar/{conta}/{saque}")]
         public async Task<ActionResult<Conta>> Sacar([FromBody] EntradaContaDTO conta, float saque)
         {
 

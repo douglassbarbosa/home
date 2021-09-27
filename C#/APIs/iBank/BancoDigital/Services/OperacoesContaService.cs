@@ -55,8 +55,5 @@ namespace BancoDigital.Services
             return resultado.Saldo;
         }
 
-
-        
-
     }
 }

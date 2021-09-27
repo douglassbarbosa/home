@@ -36,4 +36,8 @@
     <PackageReference Include="xunit.assert" Version="2.4.1" />
   </ItemGroup>
 
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarm);1591</NoWarn>
+	</PropertyGroup>
 </Project>

@@ -25,7 +25,6 @@ namespace BancoDigital.Repositorys
             return  conta;
         }
 
-      
         public bool ContaExistente(string conta)
         {
             
