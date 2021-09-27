@@ -12,9 +12,9 @@ namespace BancoDigital.Services
 
         Task<double> Saldo(string conta);
 
-        Task<Conta> Depositar(EntradaContaDTO conta, float valor);
+        Task<Conta> Depositar(EntradaContaDTO conta);
 
-        Task<Conta> Sacar (EntradaContaDTO conta, float saque);
+        Task<Conta> Sacar (EntradaContaDTO conta);
         bool ContaExistente(string conta);
 
     }

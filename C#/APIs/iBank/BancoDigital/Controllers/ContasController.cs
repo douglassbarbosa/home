@@ -23,7 +23,7 @@ namespace BancoDigital.Controllers
         /// Obter saldo de uma determinada conta
         /// </summary>
         /// <param name="conta"></param>
-        [HttpGet("saldo")]
+        [HttpGet("Saldo")]
         public async Task<ActionResult> Saldo(string conta)
         {
 
@@ -43,14 +43,13 @@ namespace BancoDigital.Controllers
         /// Efetuar Deposito de valor na conta do usuário.
         /// </summary>
         /// <param name="conta"></param>
-        /// <param name="valor"></param>
         /// <returns code="200">Saldo da Conta Atual</returns>
         /// <returns code="404">Conta não existe.</returns>
-        [HttpPut("Depositar/{conta}/{valor}")]
-        public async Task<ActionResult<Conta>> Depositar([FromBody] EntradaContaDTO conta, float valor)
+        [HttpPut("Depositar")]
+        public async Task<ActionResult<Conta>> Depositar([FromBody] EntradaContaDTO conta)
         {
 
-            var contaAtualizada = await _service.Depositar(conta,valor);
+            var contaAtualizada = await _service.Depositar(conta);
             if (contaAtualizada != null)
             {
                 return Ok(contaAtualizada);
@@ -63,17 +62,16 @@ namespace BancoDigital.Controllers
         /// Sacar / Debitar valor da conta.
         /// </summary>
         /// <param name="conta"></param>
-        /// <param name="saque"></param>
-        [HttpPut("Sacar/{conta}/{saque}")]
-        public async Task<ActionResult<Conta>> Sacar([FromBody] EntradaContaDTO conta, float saque)
+        [HttpPut("Sacar")]
+        public async Task<ActionResult<Conta>> Sacar([FromBody] EntradaContaDTO conta)
         {
 
             var saldo = await _service.Saldo(conta.Conta);
           
-            if (saldo >= saque)
+            if (saldo >= conta.Saldo)
             {
 
-                var contaAtualizada = await _service.Sacar(conta, saque);
+                var contaAtualizada = await _service.Sacar(conta);
                 return Ok(contaAtualizada);
             }
             return UnprocessableEntity("Saldo Insuficiente");

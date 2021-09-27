@@ -22,13 +22,13 @@ namespace BancoDigital.Services
           return  _repository.ContaExistente(conta);
         }
 
-        public async Task<Conta> Depositar(EntradaContaDTO conta, float deposito)
+        public async Task<Conta> Depositar(EntradaContaDTO conta)
         {
           
          var contaBd = await _repository.PegarConta(conta.Conta);
             if (contaBd !=null)
                 { 
-                  contaBd.Saldo += deposito;
+                  contaBd.Saldo += conta.Saldo;
 
                   return await _repository.Atualizar(contaBd);
             }
@@ -37,11 +37,11 @@ namespace BancoDigital.Services
 
         
 
-        public async Task<Conta> Sacar(EntradaContaDTO conta, float saque)
+        public async Task<Conta> Sacar(EntradaContaDTO conta)
         {
             var contaBd = await _repository.PegarConta(conta.Conta);
            
-            contaBd.Saldo -= saque;
+            contaBd.Saldo -= conta.Saldo;
 
             return await _repository.Atualizar(contaBd);
         }
