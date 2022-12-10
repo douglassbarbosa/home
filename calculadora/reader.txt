@@ -1,8 +1,0 @@
-/*******************************************************__************************************************************/
-|
-|                             Proposta de Exercítar projetos e o Github - com a elaboração da calculadora
-|
-/*******************************************************__************************************************************/
-
-Inicialmente na linguagem C# colocando em prática a programação Orientada à Objetos
-
