@@ -1,12 +1,20 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { PrismaService } from './database/prisma.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private prisma: PrismaService) {}
 
-  @Get('hello')
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('cars')
+  async getHello() {
+    const cars = await this.prisma.carManufacturer.create({
+      data: {
+        id: 'sport',
+        name: 'Camaro',
+        manufacture: 'Ford',
+      },
+    });
+
+    return { cars };
   }
 }

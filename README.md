@@ -58,6 +58,25 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Prisma
+
+```bash
+# Prima install
+$ npm install prisma -D
+
+# Prima config SQLite database
+$ npx prisma init --datasource-provider SQLite
+
+# Prima Migration
+$ npx prisma migrate dev
+
+# Prima Migration
+$ npm i @prisma/client
+
+# Prima Studio
+$ npm prisma studio
+```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
