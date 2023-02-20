@@ -18,16 +18,17 @@ namespace Calculator
             Console.WriteLine("Enter a value 2: ");
             var number2 = float.Parse(Console.ReadLine());
 
+            Console.Clear();
             switch (op)
             {
                 case "+":
-                    Console.WriteLine(number + number2);
+                    Console.WriteLine("Resultado: " + (number + number2));
                     break;
                 case "-":
-                    Console.WriteLine(number - number2);
+                    Console.WriteLine("Resultado: " + (number - number2));
                     break;
                 case "*":
-                    Console.WriteLine(number * number2);
+                    Console.WriteLine("Resultado: " + (number * number2));
                     break;
                 case "/":
                     if ((int)number2 == 0)
@@ -35,16 +36,16 @@ namespace Calculator
                         Console.WriteLine("ERROR - Don't divisions for Zero");
                         break;
                     }
-                    Console.WriteLine(number / number2);
+                    Console.WriteLine("Resultado: " + (number / number2));
                     break;
                 case "%":
-                    Console.WriteLine(number % number2);
+                    Console.WriteLine("Resultado: " + (number % number2));
                     break;
                 case "^":
-                    Console.WriteLine(Math.Pow(number, number2));
+                    Console.WriteLine("Resultado: " + (Math.Pow(number, number2)));
                     break;
                 default:
-                    Console.WriteLine("Invalid operator");
+                    Console.WriteLine("Invalid operator. Try Again!");
                     break;
             }
             Console.WriteLine();
