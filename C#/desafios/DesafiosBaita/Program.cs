@@ -81,12 +81,46 @@ namespace DesafiosBaita
             Console.ReadKey();
             MenuDesafios();
         }
+        static void DesafioTree()
+        {
+            Console.Clear();
+            decimal etanol = 0;
+            decimal gasolina = 0;
+            decimal indiceCalculado = 0;
+
+
+            Console.WriteLine("APLICAÇÃO PARA ESCOLHER QUAL CONBUSTÍVEL ABASTECER. ");
+            Console.WriteLine("");
+            Console.WriteLine("Informe o valor do Etanol: ");
+            etanol = Decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Informe o valor da Gasolina: ");
+            gasolina = Decimal.Parse(Console.ReadLine());
+            Console.WriteLine("");
+
+            decimal CalculaIndice(decimal etanol, decimal gasolina)
+            {
+                return (etanol / gasolina);
+            }
+
+            indiceCalculado = CalculaIndice(etanol, gasolina);
+            if (indiceCalculado >= 0.75m)
+            {
+                Console.WriteLine($"Abasteça com Gasolina");
+                Console.ReadKey();
+                MenuDesafios();
+            }
+            Console.WriteLine($"Abasteça com Etanol");
+
+            Console.ReadKey();
+            MenuDesafios();
+        }
+
         static void MenuDesafios()
         {
             Console.Clear();
             Console.WriteLine("1. Desafio 1");
             Console.WriteLine("2. Desafio 2");
-            // Console.WriteLine("3. Desafio ");
+            Console.WriteLine("3. Desafio 3");
             // Console.WriteLine("4. Desafio ");
             Console.WriteLine("0. Sair");
             Console.WriteLine("");
@@ -99,7 +133,7 @@ namespace DesafiosBaita
             {
                 case 1: DesafioOne(); break;
                 case 2: DesafioTwo(); break;
-                // case 3: ; break;
+                case 3: DesafioTree(); break;
                 // case 4: ; break;
                 // case 5: ; break;
                 // case 6: ; break;
