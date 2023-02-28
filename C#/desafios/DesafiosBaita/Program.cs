@@ -115,13 +115,99 @@ namespace DesafiosBaita
             MenuDesafios();
         }
 
+        static void DesafioFour()
+        {
+            Console.Clear();
+            double pagamento;
+            double total;
+            double troco = 0;
+            double moeda = 0;
+            int qtdNotas = 0;
+            int nota = 0;
+            var vNotas = new int[] { 200, 100, 50, 20, 10, 2 };
+            var vMoedas = new double[] { 1, 0.50, 0.25, 0.10, 0.05 };
+
+            //Entradas [Valor da compra. Valor Pago pelo Cliente]
+            Console.Clear();
+            Console.WriteLine("Informe o valor a ser pago:");
+            total = double.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            Console.WriteLine("Valor pago:");
+            pagamento = double.Parse(Console.ReadLine());
+
+            //Verificar Pagou tudo
+            if (TemTroco(total, pagamento))
+            {
+                troco = pagamento - total;
+                Console.WriteLine($"Troco: {troco}");
+            }
+
+            if (!TemTroco(total, pagamento))
+            {
+                if (pagamento == 0)
+                {
+                    Console.WriteLine("Nenhum pagamento recebido.");
+
+                    Console.ReadKey();
+                    MenuDesafios();
+                }
+                if (total > pagamento)
+                {
+                    Console.WriteLine("Saldo insuficiente.");
+
+                    Console.ReadKey();
+                    MenuDesafios();
+                }
+                Console.WriteLine("Obrigado por seu pagamento.");
+
+                Console.ReadKey();
+                MenuDesafios();
+            }
+
+            bool TemTroco(double total, double pagamento)
+            {
+                if (pagamento > 0 && total < pagamento)
+                {
+                    return true;
+                }
+                return false;
+            }
+            void DarTroco(double troco)
+            {
+                while (troco > 0.04)
+                {
+                    for (int i = 0; i < vNotas.Length; i++)
+                    {
+                        if (troco >= vNotas[i])
+                        {
+                            troco %= vNotas[i];
+                            Console.WriteLine("  - " + (troco / vNotas[i]) + " nota(s) de " + vNotas[i] + " reais");
+                        }
+                        Console.Write(" ");
+                    }
+                    for (int i = 0; i < vMoedas.Length; i++)
+                    {
+                        if (troco >= vMoedas[i])
+                        {
+                            troco %= vMoedas[i];
+                            Console.WriteLine("  - " + (troco / vMoedas[i]) + " nota(s) de " + vMoedas[i] + " reais");
+                        }
+                        Console.Write(" ");
+                    }
+                }
+            }
+
+            Console.ReadKey();
+            MenuDesafios();
+        }
+
         static void MenuDesafios()
         {
             Console.Clear();
             Console.WriteLine("1. Desafio 1");
             Console.WriteLine("2. Desafio 2");
             Console.WriteLine("3. Desafio 3");
-            // Console.WriteLine("4. Desafio ");
+            Console.WriteLine("4. Desafio ");
             Console.WriteLine("0. Sair");
             Console.WriteLine("");
             Console.WriteLine(" ----------- ");
@@ -134,7 +220,7 @@ namespace DesafiosBaita
                 case 1: DesafioOne(); break;
                 case 2: DesafioTwo(); break;
                 case 3: DesafioTree(); break;
-                // case 4: ; break;
+                case 4: DesafioFour(); break;
                 // case 5: ; break;
                 // case 6: ; break;
                 case 0: System.Environment.Exit(0); break;
