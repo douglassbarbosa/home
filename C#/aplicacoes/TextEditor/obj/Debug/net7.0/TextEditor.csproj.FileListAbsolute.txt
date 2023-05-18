@@ -1,0 +1,15 @@
+E:\workspace\home\C#\aplicacoes\TextEditor\bin\Debug\net7.0\TextEditor.exe
+E:\workspace\home\C#\aplicacoes\TextEditor\bin\Debug\net7.0\TextEditor.deps.json
+E:\workspace\home\C#\aplicacoes\TextEditor\bin\Debug\net7.0\TextEditor.runtimeconfig.json
+E:\workspace\home\C#\aplicacoes\TextEditor\bin\Debug\net7.0\TextEditor.dll
+E:\workspace\home\C#\aplicacoes\TextEditor\bin\Debug\net7.0\TextEditor.pdb
+E:\workspace\home\C#\aplicacoes\TextEditor\obj\Debug\net7.0\TextEditor.csproj.AssemblyReference.cache
+E:\workspace\home\C#\aplicacoes\TextEditor\obj\Debug\net7.0\TextEditor.GeneratedMSBuildEditorConfig.editorconfig
+E:\workspace\home\C#\aplicacoes\TextEditor\obj\Debug\net7.0\TextEditor.AssemblyInfoInputs.cache
+E:\workspace\home\C#\aplicacoes\TextEditor\obj\Debug\net7.0\TextEditor.AssemblyInfo.cs
+E:\workspace\home\C#\aplicacoes\TextEditor\obj\Debug\net7.0\TextEditor.csproj.CoreCompileInputs.cache
+E:\workspace\home\C#\aplicacoes\TextEditor\obj\Debug\net7.0\TextEditor.dll
+E:\workspace\home\C#\aplicacoes\TextEditor\obj\Debug\net7.0\refint\TextEditor.dll
+E:\workspace\home\C#\aplicacoes\TextEditor\obj\Debug\net7.0\TextEditor.pdb
+E:\workspace\home\C#\aplicacoes\TextEditor\obj\Debug\net7.0\TextEditor.genruntimeconfig.cache
+E:\workspace\home\C#\aplicacoes\TextEditor\obj\Debug\net7.0\ref\TextEditor.dll
