@@ -35,3 +35,40 @@ msbuild.wrn
 
 # historico 
 .history/
+
+# Arquivos e diretórios específicos do Dart
+.dart_tool/
+.packages
+.pub/
+/build/
+
+# Arquivos de dependências gerados pelo pub
+.dart_tool/package_config.json
+.pubspec.lock
+# Arquivos e diretórios específicos do .NET
+obj/
+bin/
+*.exe
+*.dll
+*.pdb
+*.userprefs
+
+# Arquivos de configuração do Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+
+# Pacotes NuGet
+packages/
+
+# Cache de ferramentas do .NET
+.nuget/
+
+# Arquivos de compilação gerados
+*.cache
+*.log
+*.vspscc
+*.vssscc
