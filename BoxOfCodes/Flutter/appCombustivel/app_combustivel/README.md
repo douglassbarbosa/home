@@ -1,6 +1,6 @@
 # app_combustivel
 
-A new Flutter project.
+This app was created using Flutter and Dart. I was developed from the course Flutter at Balta.io.
 
 ## Getting Started
 
@@ -14,3 +14,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+SDK
+sdk: '>=3.0.1 <4.0.0'
