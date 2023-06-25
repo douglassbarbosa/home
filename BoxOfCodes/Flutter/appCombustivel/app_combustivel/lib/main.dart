@@ -13,8 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Alcool ou Gasolina',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        primarySwatch: Colors.deepPurple,
         useMaterial3: true,
       ),
       home: HomePage(),
