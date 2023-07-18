@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+
 builder.Services.AddDbContext<CategoriaClienteContext>(opt =>
     opt.UseInMemoryDatabase("CategoriaClienteList"));
 

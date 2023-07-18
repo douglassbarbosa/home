@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Models;
 
@@ -16,6 +17,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
+        [EnableQuery]
         public async Task<ActionResult<IEnumerable<CategoriaCliente>>> GetCategoriaClientes()
         {
             return await _context.CategoriaCliente.ToListAsync();
