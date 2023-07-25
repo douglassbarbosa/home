@@ -5,6 +5,6 @@ public class CategoriaCliente
 {
     public Guid Id { get; set; }
 
-    [MaxLength(300)] // Adicione a anotação [MaxLength(300)] para limitar o tamanho máximo da propriedade Nome
+    [MaxLength(300)]
     public required string Nome { get; set; }
 }
