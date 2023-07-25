@@ -20,9 +20,7 @@ dotnet restore
 
 5. Crie o banco de dados e execute as migrações com o seguinte comando:
 
-```bash
-dotnet ef database update
-```
+Banco em Memória, carregado ao iniciar a API.
 
 6. Inicie o servidor web executando o seguinte comando:
 
@@ -30,8 +28,8 @@ dotnet ef database update
 dotnet run
 ```
 
-Agora a aplicação WebAPI Core estará rodando em `https://localhost:7190`.
-Você pode utilizar o Swagger `https://localhost:7190/swagger/index.html`
+Agora a aplicação WebAPI Core estará rodando em `https://localhost:5271`.
+Você pode utilizar o Swagger `https://localhost:5271/swagger/index.html`
 
 
 ## Comandos básicos para executar no VS Code
