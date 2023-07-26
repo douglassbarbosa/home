@@ -3,7 +3,7 @@ export default function NavBar() {
     return (
         <>
          <h1>Sistema: Gestão de Clientes</h1>
-        <nav className="flex justify-between itens-center">
+        <nav className="flex justify-between itens-center " >
           <ul>
             <li>
               <Link href="../">HOME</Link>
