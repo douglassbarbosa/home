@@ -9,7 +9,7 @@ export default function NavBar() {
               <Link href="../">HOME</Link>
             </li>
             <li>
-              <Link href="../categorias">CATEGORIA CLIENTE</Link>
+              <Link href="../categorias">CATEGORIAS</Link>
             </li>
           </ul>
         </nav>
