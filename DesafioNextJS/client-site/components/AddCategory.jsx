@@ -40,17 +40,21 @@ export default function AddCategory(){
      
   
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="input-container">
+    <form onSubmit={handleSubmit} className="input-container-ADD">
+      <div>
+        <p>Adicionar nova categoria:</p>
+      <div className="input-container-add">
         <input 
           onChange = {(e) => setNome(e.target.value)}
           value={nome} 
           type="text" 
+          placeholder="Digite aqui para adicionar..."
         />
       </div>
       <button title="" type="submit" className="addCategory">
-        ADICIONAR CATEGORIA
+        ADICIONAR
       </button>
+      </div>
     </form>
   );
 };

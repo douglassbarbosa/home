@@ -1,4 +1,5 @@
 import EditCategory from '@/components/EditCategory'
+import CategoryList from '@/components/CategoryList'
 
 
 
@@ -9,7 +10,8 @@ export default async function Edit({ params}) {
 
   return (
     <>
-      <EditCategory id={id}  /> 
+      <EditCategory id={id}  />      
+      <CategoryList />
     </>
   );
 }

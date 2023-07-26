@@ -69,9 +69,10 @@ nav li:hover {
 
 /* Estilos para cada item da categoria */
 .category-item {
-  background-color: #f0f0f0;
+  background-color: #ccc;
   border: 1px solid #ccc;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 5px 10px;
   margin: 10px 5px;
 }
 /* CSS RESULTADO CATEGORIA - FIM */
@@ -79,7 +80,7 @@ nav li:hover {
 /* Estilos para o botão Editar */
 .edit-button {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 4px 6px;
   margin-right: 10px;
   background-color: #007bff;
   color: #fff;
@@ -87,40 +88,81 @@ nav li:hover {
   border-radius: 4px;
   text-decoration: none;
 }
+.edit-button:hover {
+  background-color: #004ea1;
+}
 
 /* Estilos para o botão Remover */
 .remove-button {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 4px 6px;
   background-color: #dc3545;
   color: #fff;
   border: none;
   border-radius: 4px;
   text-decoration: none;
   font-size: 1em;
+  cursor: pointer;
+}
+.remove-button:hover {
+  background-color: #b30416;
 }
 
 .category-add {
-  margin: 20px 0;
+  margin: 20px;
 }
 .button-container {
   padding-top: 10px;
   font-size:0.6em;
 }
 
-/*Box do input ADD */
-.input-container {
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px; 
-  margin: 20px;
+main {
+  background-color: #f0f0f0;
+  padding: 0 10px;
 }
+
+/* ADD Categorias */
+.input-container-add {
+  display: inline-block;
+  border-radius: 4px; 
+}
+
+.input-container-add input {
+  height: 20px;
+}
+
+.input-container-ADD {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+/* botão Add Cat*/
+.addCategory {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.addCategory:hover {
+  background-color: #0056b3; 
+}
+
 
 .input-container input {
   border: none;
   padding: 8px 12px;
   width: 200px;
   outline: none;
+}
+
+.input-container2-form {
+  
+  background-color: #a1fce1;
+  margin-top: 20px;
 }
 
 /*Box do input EDIT*/
@@ -130,30 +172,15 @@ nav li:hover {
   margin: 20px;
 }
 
-.input-container2-form {
-  
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  margin-top: 20px;
-}
+
 
 .input-container2 input {
   border: none;
-  padding: 8px 12px;
+  padding: 6px 10px;
   width: 200px;
   outline: none;
 }
 
-/* botão Add */
-.addCategory {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 12px;
-  cursor: pointer;
-  margin-left: 10px;
-}
 
 .category-add2 {
   margin-bottom: 20px;
@@ -170,7 +197,10 @@ h2 {
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 8px 12px;
+  padding: 6px 10px;
   cursor: pointer;
   text-decoration: none;
+}
+.editCategory2:hover {
+  background-color: #337735;
 }

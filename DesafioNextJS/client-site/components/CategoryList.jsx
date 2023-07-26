@@ -23,7 +23,7 @@ export default async function CategoryList() {
       <div className='category-add'>        
       <AddCategory />
       </div>
-      <h2>Categorias:</h2> 
+      <h3>Categorias:</h3> 
       <div>
         <div>
           <ul className="category-list">
@@ -36,7 +36,6 @@ export default async function CategoryList() {
                   EDITAR
                 </Link>                 
                 <RemoveBtn id={categoria.id} /> 
-
               </div>
             </li>
             ))}   
