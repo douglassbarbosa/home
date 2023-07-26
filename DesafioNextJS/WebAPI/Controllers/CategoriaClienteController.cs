@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
@@ -5,6 +6,7 @@ using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
+    [AllowAnonymous]
     [ApiController]
     [Route("api/[controller]")]
     public class CategoriaClienteController : ControllerBase
@@ -22,6 +24,7 @@ namespace WebAPI.Controllers
         {
             return await _context.CategoriaCliente.ToListAsync();
         }
+
         [HttpPost]
         public async Task<ActionResult<CategoriaCliente>> PostCategoriaCliente(CategoriaCliente categoriaCliente)
         {
@@ -32,7 +35,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id}", Name = "GetCategoriaCliente")]
-        public async Task<ActionResult<CategoriaCliente>> GetCategoriaCliente(int id)
+        public async Task<ActionResult<CategoriaCliente>> GetCategoriaCliente(Guid id)
         {
             var categoriaCliente = await _context.CategoriaCliente.FindAsync(id);
 
@@ -45,7 +48,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCategoriaCliente(Guid id, CategoriaCliente categoriaCliente)
+        public async Task<IActionResult> Put(Guid id, CategoriaCliente categoriaCliente)
         {
             if (id != categoriaCliente.Id)
             {
@@ -74,7 +77,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCategoriaCliente(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
             var categoriaCliente = await _context.CategoriaCliente.FindAsync(id);
             if (categoriaCliente == null)
