@@ -20,8 +20,8 @@ export default async function CategoryList() {
 
   return (
     <main>
-      <div className='category-add'>
-        <AddCategory />
+      <div className='category-add'>        
+      <AddCategory />
       </div>
       <h2>Categorias:</h2> 
       <div>
@@ -32,10 +32,9 @@ export default async function CategoryList() {
             <li key={categoria.id} className="category-item">
               {categoria.nome}
               <div className="button-container">
-                <Link href={`./editCategorias/${categoria.id}`} className="edit-button">
+                <Link href={`./edit/${categoria.id}`} className="edit-button">
                   EDITAR
-                </Link> 
-                
+                </Link>                 
                 <RemoveBtn id={categoria.id} /> 
 
               </div>

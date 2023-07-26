@@ -4,10 +4,15 @@
 }
 
 body {
-  background: #fff; 
-  min-height: 100vh;
-  margin: 10px;
-  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
 }
 
 /* CSS MENU - INÍCIO */
@@ -19,6 +24,7 @@ nav {
   background-color: #f0f0f0;
   padding: 10px 10px 10px 10px;
   min-width: 300px;
+  margin-bottom: px;
 }
 
 /* Estilos para os itens do menu */
@@ -69,3 +75,102 @@ nav li:hover {
   margin: 10px 5px;
 }
 /* CSS RESULTADO CATEGORIA - FIM */
+
+/* Estilos para o botão Editar */
+.edit-button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Estilos para o botão Remover */
+.remove-button {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.category-add {
+  margin: 20px 0;
+}
+.button-container {
+  padding-top: 10px;
+  font-size:0.6em;
+}
+
+/*Box do input ADD */
+.input-container {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  margin: 20px;
+}
+
+.input-container input {
+  border: none;
+  padding: 8px 12px;
+  width: 200px;
+  outline: none;
+}
+
+/*Box do input EDIT*/
+.input-container2 {
+  display: inline-block;
+  border-radius: 4px; 
+  margin: 20px;
+}
+
+.input-container2-form {
+  
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.input-container2 input {
+  border: none;
+  padding: 8px 12px;
+  width: 200px;
+  outline: none;
+}
+
+/* botão Add */
+.addCategory {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.category-add2 {
+  margin-bottom: 20px;
+}
+
+/* Estilos para o título "Categorias" */
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Estilos para o botão verde */
+.editCategory2 {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-decoration: none;
+}
