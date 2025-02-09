@@ -1,0 +1,28 @@
+name: CI Calculate GitHub Actions
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:Ci
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: "7.0.x"
+
+    - name: Restore dependencies
+      run: dotnet restore APIs/CalculateProject/CalculateProject.sln
+
+    - name: Build
+      run: dotnet build APIs/CalculateProject/CalculateProject.sln --configuration Release --no-restore
+
+    - name: Run tests
+      run: dotnet test APIs/CalculateProject/CalculateProject.sln --configuration Release --no-build
