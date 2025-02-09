@@ -17,13 +17,13 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "7.0.x" # Ajuste para a versão do .NET que você usa
+          dotnet-version: "7.0.x"
 
       - name: Restore dependencies
-        run: dotnet restore 1-Portfolio-Projects/APIs/CaculateProject/CalculateProject/CalculateProject.sln
+        run: dotnet restore 1-Portfolio-Projects/CalculateProject/CalculateProject.sln
 
       - name: Build solution
-        run: dotnet build 1-Portfolio-Projects/APIs/CaculateProject/CalculateProject/CalculateProject.sln --configuration Release --no-restore
+        run: dotnet build 1-Portfolio-Projects/CalculateProject/CalculateProject.sln --configuration Release --no-restore
 
       - name: Run tests
-        run: dotnet test 1-Portfolio-Projects/APIs/CaculateProject/CalculateProject/CalculateProject.sln --configuration Release --no-build
+        run: dotnet test 1-Portfolio-Projects/CalculateProject/CalculateProject.sln --configuration Release --no-build
