@@ -2,22 +2,26 @@ name: .NET Build and Test
 
 on:
   push:
-    branches:
-      - development
+    branches: ["development"]
   pull_request:
-    branches:
-      - master
+    branches: ["master"]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
 
+    runs-on: windows-latest
+
+    env:
+      Solution_Name: "Calculate2025.sln"
     steps:
       - name: Checkout code
         uses: actions/checkout@v32
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "9.0.x"
 
